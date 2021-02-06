@@ -86,5 +86,11 @@ function getCurrentWeather (event){
     navigator.geolocation.getCurrentPosition(showTemperature);
 }
 
+let initialCity = document.querySelector ("#city");
+initialCity.innerHTML = `${localCity}`;
+
+let initialTemp = document.querySelector ("#temperature");
+initialTemp.innerHTML = `${localTemperature}`;
+
 let currentLocalWeather = document.querySelector("#current-city");
 currentLocalWeather.addEventListener("click", getCurrentWeather)
